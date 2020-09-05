@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+/* Navbar */
+.navbar {
+  background: #f1e9e1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-link {
+  font-weight: bold;
+  color: #4f5b66;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-link:hover {
+  color: #8d95a4;
+}
+
+.navbar-brand {
+  color: #d2644d;
+}
+
+.navbar-brand:hover {
+  color: #d2644d;
+}
+
+/* Input search */
+.search-input {
+  height: 50px;
+  font-size: 20px;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.search-content {
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  width: max-content;
+}
+
+.btn-icon {
+  padding: 0;
+}
+
+.icon-search {
+  transition: all 0.5s ease;
+}
+
+.icon-search:hover {
+  color: #d2644d;
+  transform: scale(1.3);
+}
+
+/* Images */
+.content {
+  padding: 15px;
+  height: 250px;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+}
+
+.content img:hover {
+  box-shadow: 0 0 32px #333;
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+@supports (object-fit: cover) {
+  .content img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.grid-image {
+  display: block;
+  flex-basis: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 640px) {
+  .grid-image {
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .grid-image {
+    flex-basis: 33%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .grid-image {
+    flex-basis: 25%;
+  }
+}
+
+/* Loading */
+.loading-content {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
 }
