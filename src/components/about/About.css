@@ -1,0 +1,11 @@
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 15%;
+}
+
+.pexels-logo {
+  width: 150px;
+}

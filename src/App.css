@@ -29,6 +29,13 @@
   outline: none;
 }
 
+.search-input:-webkit-autofill,
+.search-input:-webkit-autofill:hover,
+.search-input:-webkit-autofill:focus,
+.search-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fff inset;
+}
+
 .search-content {
   border-bottom: 1px solid #bbb;
   padding: 0;
@@ -104,6 +111,17 @@
   .grid-image {
     flex-basis: 25%;
   }
+}
+
+.btn-more {
+  background: #d2644d;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.btn-more:hover {
+  background: #d2644d;
+  color: #fff;
 }
 
 /* Loading */

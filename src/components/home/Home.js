@@ -42,7 +42,6 @@ export default function Home() {
     let pageNow = page + 1;
     setPage((prev) => prev + 1);
     const imagesData = await getImages(query, pageNow);
-    console.log(imagesData);
     setImages((prev) => [...prev, ...imagesData]);
   }
 
@@ -65,7 +64,10 @@ export default function Home() {
             </div>
           )}
           <div className="text-center w-100 m-5">
-            <button className="btn btn-light" onClick={() => loadMore()}>
+            <button
+              className="btn btn-more pl-5 pr-5"
+              onClick={() => loadMore()}
+            >
               More
             </button>
           </div>
