@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
-import Images from "./Images";
 import { getImages } from "../../Api";
 import Loading from "./Loading";
 
@@ -51,19 +50,32 @@ export default function Home() {
       {loading === true ? (
         <Loading />
       ) : (
-        <div className="grid mt-5">
+        <div>
           {images.length !== 0 ? (
-            images.map((image, index) => (
-              <div key={index} className="grid-image">
-                <Images image={image} />
-              </div>
-            ))
+            <div className="grid mt-5">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="grid-image"
+                  style={{ backgroundImage: "url(" + image.src.large + ")" }}
+                >
+                  <a
+                    href={image.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ height: "100%", display: "block" }}
+                  >
+                    &nbsp;
+                  </a>
+                </div>
+              ))}
+            </div>
           ) : (
             <div className="loading-content text-muted">
               <h3>No images found for "{query}"</h3>
             </div>
           )}
-          <div className="text-center w-100 m-5">
+          <div className="container text-center w-100 m-5">
             <button
               className="btn btn-more pl-5 pr-5"
               onClick={() => loadMore()}

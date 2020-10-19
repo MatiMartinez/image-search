@@ -7,9 +7,19 @@ export default function About() {
       <div className="about-content">
         <div>
           <h5 className="mb-3">Images Search Project</h5>
-          <p className="mb-5">
+          <p className="mb-3">
             Image Search is a web application that provides photos from the
-            Pexels API. Web app using ReactJS.
+            Pexels API. Web app using ReactJS & Grid CSS.
+          </p>
+          <p className="mb-5">
+            <a
+              href="https://github.com/MatiMartinez/image-search"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-repo"
+            >
+              GITHUB REPO
+            </a>
           </p>
           <a
             href="https://www.pexels.com"
